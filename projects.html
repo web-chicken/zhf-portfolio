@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | ZHF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap wide">
+      <a class="brand" href="index.html">ZHF</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="projects-layout wrap wide">
+    <aside class="projects-sidebar">
+      <details class="projects-nav-toggle" open>
+        <summary>Projects</summary>
+        <nav id="project-nav" aria-label="Project list"></nav>
+      </details>
+    </aside>
+
+    <main>
+      <article id="project-view">
+        <h1 id="project-title">Projects</h1>
+        <p id="project-meta" class="meta"></p>
+        <div id="gallery" class="gallery"></div>
+      </article>
+    </main>
+  </div>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightbox-img" alt="">
+    <button type="button" class="lightbox-next" aria-label="Next image">›</button>
+  </dialog>
+
+  <footer class="site"><div class="wrap wide">&copy; 2026 ZHF</div></footer>
+  <script src="projects-data.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
