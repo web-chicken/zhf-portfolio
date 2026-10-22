@@ -13,7 +13,8 @@
   );
 
   function projectBySlug(slug) {
-    return allProjects.find((p) => p.slug === slug) || allProjects[0];
+    if (!slug) return null;
+    return allProjects.find((p) => p.slug === slug) || null;
   }
 
   function encodeSrc(path) {
@@ -60,7 +61,14 @@
   let lightboxIndex = 0;
 
   function renderProject(project) {
-    title.textContent = project.name;
+    if (!project) {
+      if (title) title.textContent = "";
+      gallery.innerHTML = "";
+      currentImages = [];
+      return;
+    }
+
+    if (title) title.textContent = project.name;
     // meta.textContent =
     //   project.category +
     //   " · " +
@@ -91,12 +99,9 @@
   function showProjectFromHash(options) {
     const slug = decodeURIComponent(location.hash.replace(/^#/, ""));
     const project = projectBySlug(slug);
-    if (project && location.hash !== "#" + project.slug) {
-      history.replaceState(null, "", "#" + project.slug);
-    }
-    renderNav(project.slug);
+    renderNav(project ? project.slug : null);
     renderProject(project);
-    if (options && options.scroll) {
+    if (options && options.scroll && project) {
       document.getElementById("project-view").scrollIntoView({ block: "start" });
     }
     if (toggle && window.matchMedia("(max-width: 52rem)").matches) {
