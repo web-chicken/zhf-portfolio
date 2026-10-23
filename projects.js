@@ -101,7 +101,7 @@
     renderNav(project ? project.slug : null);
     renderProject(project);
     if (options && options.scroll && project) {
-      document.getElementById("project-view").scrollIntoView({ block: "start" });
+      document.getElementById("project-title").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });;
     }
   }
 
