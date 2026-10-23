@@ -4,7 +4,6 @@
   const title = document.getElementById("project-title");
   const meta = document.getElementById("project-meta");
   const gallery = document.getElementById("gallery");
-  const toggle = document.querySelector(".projects-nav-toggle");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
@@ -103,9 +102,6 @@
     renderProject(project);
     if (options && options.scroll && project) {
       document.getElementById("project-view").scrollIntoView({ block: "start" });
-    }
-    if (toggle && window.matchMedia("(max-width: 52rem)").matches) {
-      toggle.open = false;
     }
   }
 
