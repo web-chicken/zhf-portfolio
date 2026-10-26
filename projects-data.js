@@ -180,7 +180,7 @@ window.PROJECTS = [
     "projects": [
       {
         "slug": "steel-air-return-grate-remmington",
-        "name": "Air Return Grate - Remmington",
+        "name": "Air Return Grate - Remington",
         "images": [
           "images/Steel/Air Return Grate - Remmington/IMG_20200220_130553601.jpg",
           "images/Steel/Air Return Grate - Remmington/IMG_20200220_130829990.jpg"
