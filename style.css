@@ -20,7 +20,8 @@ header.site .wrap {
   display: flex; flex-wrap: wrap; gap: .5rem 2rem;
   align-items: center; justify-content: space-between; padding-block: 1rem;
 }
-.brand { font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.brand { font-weight: 700; font-size: 1.2rem; text-decoration: none; display: flex; align-items: center; }
+.brand-img { max-height: 2.5rem; width: auto; background: transparent; }
 nav { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
 nav a { display: inline-block; padding: .8rem .75rem; min-height: 44px; }
 nav a[aria-current="page"] { text-decoration: none; font-weight: 700; }
